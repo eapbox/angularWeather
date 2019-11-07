@@ -7,6 +7,7 @@ import { WeatherComponent } from './weather/weather.component';
 import { ChoiseCityComponent } from './weather/choise-city/choise-city.component';
 import { FormsModule } from '@angular/forms';
 import { ResultWeatherComponent } from './weather/result-weather/result-weather.component';
+import { RouterModule } from '@angular/router';
 
 
 @NgModule({
@@ -19,7 +20,10 @@ import { ResultWeatherComponent } from './weather/result-weather/result-weather.
   imports: [
     BrowserModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    RouterModule.forRoot([
+      { path: '', component: AppComponent },
+    ])
   ],
   providers: [],
   bootstrap: [AppComponent]
