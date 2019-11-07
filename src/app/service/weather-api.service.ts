@@ -17,7 +17,7 @@ export class WeatherApiService {
     return new Promise((resolve, reject) => {
       this.http.get(
         this.baseURL + cityID + this.apiKey).subscribe(
-        (data:any) => {
+        (data: any) => {
           data.weatherIcon = this.weatherIconURL + data.weather[0].icon + '.png';
 
           resolve(data);
