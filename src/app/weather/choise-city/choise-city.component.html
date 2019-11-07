@@ -1,0 +1,17 @@
+<div class="cityListField">
+  <div *ngIf="cityList.length">
+    <h3>Выберите город</h3>
+    <select [(ngModel)]="selectedCity"
+            (ngModelChange)="onSelectCity($event)"
+    >
+      <option *ngFor="let city of cityList" [ngValue]="city">
+        {{city.name}}
+      </option>
+    </select>
+  </div>
+
+  <h2 *ngIf="!cityList.length">
+    {{textEmptyCityList}}
+  </h2>
+</div>
+

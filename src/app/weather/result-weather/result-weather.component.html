@@ -1,0 +1,19 @@
+<div *ngIf="currentCityWeather" class="resultField">
+
+  <h2>
+    сегодня {{curentDate | date: 'dd.MM.yyyy'}}
+  </h2>
+
+  <img src="{{currentCityWeather.weatherIcon}}" alt="{{currentCityWeather.weather[0].description}}">
+  <p class="description">
+    {{currentCityWeather.weather[0].description}}
+  </p>
+
+  <div class="result">
+    <p>Текущая температура: {{ currentCityWeather.main.temp}}°C</p>
+    <p>Макс. температура: {{ currentCityWeather.main.temp_max }}°C</p>
+    <p>Мин. температура: {{ currentCityWeather.main.temp_min }}°C</p>
+    <p>Скорость ветра: {{ currentCityWeather.wind.speed }} м/сек</p>
+  </div>
+
+</div>

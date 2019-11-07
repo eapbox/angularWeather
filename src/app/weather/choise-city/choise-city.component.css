@@ -1,0 +1,25 @@
+.cityListField {
+  width: auto;
+  height: 90px;
+  background-color: #a4e4f1;
+  border-radius: 8px;
+  padding: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 5px rgba(0,0,0,0.5);
+}
+h2 {
+  color: #f85749;
+}
+h3 {
+  color: #1d74c3;
+  margin-top: 0;
+}
+select {
+  width: 160px;
+  height: 40px;
+  border-radius: 8px;
+  outline: none;
+  font-size: 18px;
+}

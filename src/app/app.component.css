@@ -1,0 +1,11 @@
+.workField {
+  width: 400px;
+  height: 600px;
+  margin: 0 auto;
+  background-color: #e6e6e6;
+  border-radius: 8px;
+}
+
+h1 {
+  color: #1d74c3;
+}
