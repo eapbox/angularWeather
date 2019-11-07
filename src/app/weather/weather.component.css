@@ -6,3 +6,10 @@
   margin: 0 auto;
   padding: 16px;
 }
+
+@media (orientation: portrait) {
+  .wetherField {
+    width: 90vw;
+    height: 82vh;
+  }
+}
