@@ -15,7 +15,16 @@ export class WeatherApiService {
 
   public getWeather(cityID: string) {
     return new Promise((resolve, reject) => {
-      this.http.get(this.baseURL + cityID + this.apiKey).subscribe(
+      this.http.get(
+        this.baseURL + cityID + this.apiKey,
+        {
+          headers: [
+            {
+              'Content-Security-Policy': 'default-src \'self\'; script-src https://static.ads-twitter.com https://www.google-analytics.com; img-src \'self\' https://s3.amazonaws.com https://twitter.com https://pbs.twimg.com; font-src \'self\' https://fonts.gstatic.com; style-src \'self\' http://api.openweathermap.org; frame-ancestors \'none\';'
+            }
+          ]
+        }
+      ).subscribe(
         (data:any) => {
           data.weatherIcon = this.weatherIconURL + data.weather[0].icon + '.png';
 
