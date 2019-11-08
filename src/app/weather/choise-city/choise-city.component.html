@@ -9,7 +9,10 @@
       </option>
     </select>-->
 
-    <a href="#" *ngFor="let city of cityList" (click)="onSelectCity(city)">
+    <a href="#" *ngFor="let city of cityList"
+       (click)="onSelectCity(city)"
+       [class.active]="selectedCity && city.cityID == selectedCity.cityID"
+    >
       {{city.name}}
     </a>
   </div>

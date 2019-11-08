@@ -10,7 +10,7 @@ export class ChoiseCityComponent implements OnInit {
   @Output()  choiceCityEvent = new EventEmitter<any>();
 
   textEmptyCityList = 'Список городов пуст';
-  selectedCity: any[]; // текущий выбранный элемент списка (город)
+  selectedCity: any; // текущий выбранный элемент списка (город)
 
   constructor() { }
 
