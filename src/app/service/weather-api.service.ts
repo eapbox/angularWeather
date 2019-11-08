@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import {delay} from "rxjs/internal/operators";
 
 @Injectable({
   providedIn: 'root'
@@ -15,8 +16,10 @@ export class WeatherApiService {
 
   public getWeather(cityID: string) {
     return new Promise((resolve, reject) => {
-      this.http.get(
-        this.baseURL + cityID + this.apiKey).subscribe(
+      this.http
+        .get(this.baseURL + cityID + this.apiKey)
+        .pipe(delay(500))
+        .subscribe(
         (data: any) => {
           data.weatherIcon = this.weatherIconURL + data.weather[0].icon + '.png';
 

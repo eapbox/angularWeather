@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Погода на Angular!';
+  title = 'Погода, полученная посредством API из сервиса openweathermap';
 }

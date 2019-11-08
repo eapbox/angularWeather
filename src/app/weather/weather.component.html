@@ -1,12 +1,14 @@
-<div class="wetherField">
-  <app-choise-city
-    [cityList]="cityList"
-    (choiceCityEvent) = "receiveSelectedCity($event)"
-  >
-  </app-choise-city>
-
-  <app-result-weather [currentCityWeather]="currentCityWeather">
-
-  </app-result-weather>
-
+<div class="container">
+  <div class="row">
+    <div class="col-lg-2 col-md-3 col-sm-4">
+      <app-choise-city
+        [cityList]="cityList"
+        (choiceCityEvent) = "receiveSelectedCity($event)"
+      >
+      </app-choise-city>
+    </div>
+    <div class="col-lg-10 col-md-9 col-sm-8">
+      <app-result-weather [currentCityWeather]="currentCityWeather" [isLoading]="isLoadingWeather"></app-result-weather>
+    </div>
+  </div>
 </div>

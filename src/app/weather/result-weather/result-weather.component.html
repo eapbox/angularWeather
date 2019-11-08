@@ -1,8 +1,7 @@
-<div *ngIf="currentCityWeather" class="resultField">
-
-  <h2>
+<div *ngIf="currentCityWeather && !isLoading" class="resultField">
+  <h3>
     сегодня {{curentDate | date: 'dd.MM.yyyy'}}
-  </h2>
+  </h3>
 
   <img src="{{currentCityWeather.weatherIcon}}" alt="{{currentCityWeather.weather[0].description}}">
   <p class="description">
@@ -15,5 +14,8 @@
     <p>Мин. температура: {{ currentCityWeather.main.temp_min }}°C</p>
     <p>Скорость ветра: {{ currentCityWeather.wind.speed }} м/сек</p>
   </div>
+</div>
 
+<div class="spiner" *ngIf="isLoading">
+  {{textWaiting}}
 </div>

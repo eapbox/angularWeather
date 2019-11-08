@@ -1,21 +1,23 @@
 .resultField {
-  width: auto;
-  height: 72%;
+  width: 100%;
+  height: auto;
   background-color: rgba(113, 201, 255, 0.65);
   border-radius: 8px;
   padding: 8px;
-  margin-top: 16px;
   box-shadow: 0 0 5px rgba(0,0,0,0.5);
 }
 .result {
   font-size: 18px;
   color: #1d8fe5;
-  text-align: left;
   font-weight: bold;
 }
-h2 {
+h3 {
   color: white;
 }
 .description {
   margin-top: 0;
+}
+.spiner {
+  font-size: 18px;
+  color: #1d8fe5;
 }

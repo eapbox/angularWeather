@@ -1,15 +1,6 @@
-.wetherField {
-  width: 400px;
-  height: 436px;
+.container {
   background-color: #f2f2f2;
   border-radius: 8px;
   margin: 0 auto;
-  padding: 16px;
-}
-
-@media (orientation: portrait) {
-  .wetherField {
-    width: 90vw;
-    height: 82vh;
-  }
+  padding: 12px;
 }
