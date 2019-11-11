@@ -9,7 +9,7 @@
       </option>
     </select>-->
 
-    <a href="#" *ngFor="let city of cityList"
+    <a href="javascript:void(0);" *ngFor="let city of cityList"
        (click)="onSelectCity(city)"
        [class.active]="selectedCity && city.cityID == selectedCity.cityID"
     >
