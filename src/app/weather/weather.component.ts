@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { CityListService } from '../service/city-list.service';
-import { WeatherApiService } from '../service/weather-api.service';
+import { City, CityListService } from '../service/city-list.service';
+import { Weather, WeatherApiService } from '../service/weather-api.service';
 
 @Component({
   selector: 'app-weather',
@@ -9,8 +9,8 @@ import { WeatherApiService } from '../service/weather-api.service';
 })
 
 export class WeatherComponent implements OnInit {
-  cityList: any[] = [];
-  currentCityWeather: any;
+  cityList: City[] = [];
+  currentCityWeather: Weather;
   isLoadingWeather = false;
 
   constructor(
@@ -27,7 +27,7 @@ export class WeatherComponent implements OnInit {
     this.isLoadingWeather = true;
     this.currentCityWeather = null;
     this.weatherService.getWeather(city.cityID).then(
-      data => {
+      (data: Weather) => {
         this.currentCityWeather = data;
         console.log(JSON.stringify(this.currentCityWeather));
         this.isLoadingWeather = false;

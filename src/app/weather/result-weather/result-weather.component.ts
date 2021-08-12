@@ -1,4 +1,5 @@
-import {Component, Input, OnInit} from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { Weather } from '../../service/weather-api.service';
 
 @Component({
   selector: 'app-result-weather',
@@ -6,11 +7,10 @@ import {Component, Input, OnInit} from '@angular/core';
   styleUrls: ['./result-weather.component.css']
 })
 export class ResultWeatherComponent implements OnInit {
-  @Input() currentCityWeather: any;
+  @Input() currentCityWeather: Weather;
   @Input() isLoading: boolean;
 
   private curentDate: Date;
-  private weatherIcon;
 
   private textWaiting = 'Загрузка погоды, ожидайте...';
 

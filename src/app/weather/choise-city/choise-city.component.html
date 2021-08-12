@@ -1,13 +1,13 @@
 <div class="cityListField">
   <div *ngIf="cityList.length">
     <h6>Выберите город</h6>
-    <!--<select [(ngModel)]="selectedCity"
-            (ngModelChange)="onSelectCity($event)"
-    >
-      <option *ngFor="let city of cityList" [ngValue]="city">
-        {{city.name}}
-      </option>
-    </select>-->
+    <!--<select [(ngModel)]="selectedCity"-->
+            <!--(ngModelChange)="onSelectCity($event)"-->
+    <!--&gt;-->
+      <!--<option *ngFor="let city of cityList" [ngValue]="city">-->
+        <!--{{city.name}}-->
+      <!--</option>-->
+    <!--</select>-->
 
     <a href="javascript:void(0);" *ngFor="let city of cityList"
        (click)="onSelectCity(city)"
